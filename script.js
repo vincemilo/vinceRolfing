@@ -21,14 +21,14 @@ document.querySelectorAll("#mainNav a").forEach((link) => {
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
 // Simple form submission handling
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// document.getElementById("contactForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  // In a real implementation, you would send this data to a server
-  // For this example, we'll just show an alert
-  alert("Thank you for your message! I will get back to you within 24 hours.");
-  this.reset();
-});
+// In a real implementation, you would send this data to a server
+// For this example, we'll just show an alert
+//   alert("Thank you for your message! I will get back to you within 24 hours.");
+//   this.reset();
+// });
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
