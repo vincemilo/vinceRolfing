@@ -180,9 +180,10 @@ nav ul li a:hover {
   background: linear-gradient(rgba(42, 92, 124, 0.85), rgba(42, 92, 124, 0.9)),
     url("img/littleboy_10.625x6.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   color: white;
   text-align: center;
+  margin-top: 80px;
 }
 
 .hero h1 {
