@@ -148,10 +148,11 @@ header {
 nav ul {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin-left: 30px;
+  padding: 0 8px;
 }
 
 nav ul li a {
@@ -533,13 +534,14 @@ footer {
     opacity: 1;
     visibility: visible;
   } */
-
-  /* nav ul {
-    flex-direction: column;
+  /* 
+  nav ul {
+    flex-wrap: wrap;
   } */
-
-  /* nav ul li {
-    margin: 0 0 15px 0;
+  /* 
+  nav ul li {
+    margin: 0;
+    padding: 0 8px;
   } */
 
   /* nav ul li a {
