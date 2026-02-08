@@ -1,13 +1,13 @@
 // Mobile menu toggle
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mainNav = document.getElementById("mainNav");
+// const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+// const mainNav = document.getElementById("mainNav");
 
-mobileMenuBtn.addEventListener("click", () => {
-  mainNav.classList.toggle("active");
-  mobileMenuBtn.innerHTML = mainNav.classList.contains("active")
-    ? '<i class="fas fa-times"></i>'
-    : '<i class="fas fa-bars"></i>';
-});
+// mobileMenuBtn.addEventListener("click", () => {
+//   mainNav.classList.toggle("active");
+//   mobileMenuBtn.innerHTML = mainNav.classList.contains("active")
+//     ? '<i class="fas fa-times"></i>'
+//     : '<i class="fas fa-bars"></i>';
+// });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll("#mainNav a").forEach((link) => {
