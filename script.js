@@ -47,3 +47,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// Rolfing Info Accordion
+const rolfingInfoBtn = document.getElementById("rolfingInfoBtn");
+const rolfingInfoContent = document.getElementById("rolfingInfoContent");
+
+if (rolfingInfoBtn) {
+  rolfingInfoBtn.addEventListener("click", () => {
+    rolfingInfoBtn.classList.toggle("active");
+    rolfingInfoContent.classList.toggle("active");
+  });
+}
+
+// Orthopedic Massage Info Accordion
+const orthopedicInfoBtn = document.getElementById("orthopedicInfoBtn");
+const orthopedicInfoContent = document.getElementById("orthopedicInfoContent");
+
+if (orthopedicInfoBtn) {
+  orthopedicInfoBtn.addEventListener("click", () => {
+    orthopedicInfoBtn.classList.toggle("active");
+    orthopedicInfoContent.classList.toggle("active");
+  });
+}
