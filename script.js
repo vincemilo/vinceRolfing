@@ -47,3 +47,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// FAQ Accordion Functionality
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+    const isActive = question.classList.contains("active");
+
+    // Optional: Close other FAQs in the same category
+    const parentCategory = question.closest(".faq-category");
+    if (parentCategory && !isActive) {
+      parentCategory.querySelectorAll(".faq-question").forEach((q) => {
+        if (q !== question) {
+          q.classList.remove("active");
+          q.nextElementSibling.classList.remove("active");
+        }
+      });
+    }
+
+    // Toggle current FAQ
+    question.classList.toggle("active");
+    answer.classList.toggle("active");
+  });
+});
