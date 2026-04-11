@@ -180,7 +180,8 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   padding: 160px 0 100px;
-  background: linear-gradient(rgba(42, 92, 124, 0.85), rgba(42, 92, 124, 0.9)),
+  background:
+    linear-gradient(rgba(42, 92, 124, 0.85), rgba(42, 92, 124, 0.9)),
     url("img/littleboy_10.625x6.jpg");
   background-size: cover;
   background-position: top;
@@ -824,5 +825,191 @@ footer {
   .faq-answer.active {
     max-height: 1000px; /* Large enough for your longest answer */
     border-top-color: var(--light-gray);
+  }
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
+#testimonials {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Quote icon */
+.testimonial-card > i.fa-quote-left {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  opacity: 0.3;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Review text */
+.testimonial-card p {
+  color: var(--gray-color);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Source Badge (Google/Yelp) */
+.testimonial-source-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.testimonial-source-badge.google {
+  background-color: rgba(66, 133, 244, 0.1);
+  color: #4285f4;
+}
+
+.testimonial-source-badge.yelp {
+  background-color: rgba(215, 40, 40, 0.1);
+  color: #d72828;
+}
+
+/* Author name */
+.testimonial-author {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Verified checkmark */
+.testimonial-author i {
+  margin-left: 6px;
+  font-size: 0.8rem;
+}
+
+/* Source link (optional) */
+.testimonial-source-link {
+  font-size: 0.75rem;
+  margin-top: 8px;
+}
+
+.testimonial-source-link a {
+  color: var(--gray-color);
+  text-decoration: none;
+}
+
+.testimonial-source-link a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Featured testimonial (larger, maybe first one) */
+.testimonial-card.featured {
+  background: linear-gradient(135deg, white 0%, rgba(74, 139, 108, 0.02) 100%);
+  border: 1px solid rgba(74, 139, 108, 0.2);
+}
+
+/* Footer with platform links */
+.testimonials-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.testimonials-footer p {
+  color: var(--gray-color);
+  margin-bottom: 15px;
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.platform-btn.google {
+  background-color: #4285f4;
+  color: white;
+}
+
+.platform-btn.yelp {
+  background-color: #d72828;
+  color: white;
+}
+
+.platform-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.platform-btn i {
+  font-size: 1.1rem;
+}
+
+/* Rating stars (optional) */
+.rating-stars {
+  margin-bottom: 15px;
+}
+
+.rating-stars i {
+  color: #ffc107;
+  font-size: 0.9rem;
+  margin-right: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  #testimonials {
+    padding: 60px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .platform-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
   }
 }
