@@ -1204,3 +1204,132 @@ footer {
     width: 100%;
   }
 }
+
+/* Techniques Grid (reuse from earlier) */
+.techniques-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.technique-tag {
+  background-color: rgba(42, 92, 124, 0.1);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* Orthopedic Process Grid */
+.orthopedic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.orthopedic-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.orthopedic-number {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 15px;
+}
+
+.orthopedic-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.orthopedic-card p {
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Comparison Block (reuse from earlier) */
+.comparison-block {
+  background-color: rgba(212, 167, 106, 0.05);
+  border-radius: var(--border-radius);
+  padding: 25px;
+}
+
+.comparison-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.comparison-item {
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.comparison-item:first-child {
+  border-left-color: var(--primary-color);
+}
+
+.comparison-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comparison-title i {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.comparison-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  line-height: 1.6;
+}
+
+.complementary-note {
+  background-color: rgba(74, 139, 108, 0.1);
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsive for comparison */
+@media (max-width: 768px) {
+  .comparison-box {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .orthopedic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .techniques-grid {
+    justify-content: center;
+  }
+}
