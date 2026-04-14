@@ -28,18 +28,21 @@ description: "Deep dive into Rolfing® - the Ten-Series, how it works, who it he
                 <p>[Ideal candidates]</p>
                 
                 <h2>Rolfing FAQ</h2>
-                <div class="faq-container">
-                    <!-- Rolfing-specific FAQs -->
-                </div>
+                {% include rolfing-faqs.html %}
                 
                 <h2>Pricing</h2>
                 <p>[Rolfing packages]</p>
                 
                 <div class="cta-section">
-                    <a href="YOUR_SQUARE_LINK" class="btn btn-primary">Book a Rolfing Consultation</a>
+                    <a href="/#contact" class="btn btn-primary">Book a Rolfing Consultation</a>
+                     <p>Looking for a more traditional, targeted approach? 
+   <a href="/orthopedic-massage.html">Learn about Orthopedic Massage →</a>
+</p>
                 </div>
+                
             </div>
         </section>
+       
     </main>
     
     {% include footer.html %}

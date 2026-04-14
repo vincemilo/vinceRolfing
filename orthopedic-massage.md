@@ -18,15 +18,8 @@ description: "Deep dive into Rolfing® - the Ten-Series, how it works, who it he
         
         <section class="service-detail">
             <div class="container">
-                <h2>What Is Rolfing®?</h2>
-                <p>[Your detailed Rolfing content here]</p>
-                
-                <h2>The Ten-Series®</h2>
-                <p>[Breakdown of sessions 1-10]</p>
-                
-                <h2>Who Can Benefit</h2>
-                <p>[Ideal candidates]</p>
-                
+                <h2>What Is Orthopedic Massage?</h2>
+                <p>[Your detailed orthopedic massage content here]</p>
                 <h2>Rolfing FAQ</h2>
                 <div class="faq-container">
                     <!-- Rolfing-specific FAQs -->
@@ -36,13 +29,19 @@ description: "Deep dive into Rolfing® - the Ten-Series, how it works, who it he
                 <p>[Rolfing packages]</p>
                 
                 <div class="cta-section">
-                    <a href="YOUR_SQUARE_LINK" class="btn btn-primary">Book a Rolfing Consultation</a>
+                    <a href="/contact" class="btn btn-primary">Book a Rolfing Consultation</a>
+                     <p>Looking for a more systematic approach? 
+   <a href="/rolfing.html">Learn about Rolfing →</a>
+</p>
                 </div>
             </div>
+                    
         </section>
+
     </main>
-    
+
     {% include footer.html %}
     {% include scripts.html %}
+
 </body>
 </html>
