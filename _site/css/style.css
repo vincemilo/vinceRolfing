@@ -182,7 +182,7 @@ nav ul li a:hover {
   padding: 160px 0 100px;
   background:
     linear-gradient(rgba(42, 92, 124, 0.85), rgba(42, 92, 124, 0.9)),
-    url("img/littleboy_10.625x6.jpg");
+    url("/img/littleboy_10.625x6.jpg");
   background-size: cover;
   background-position: top;
   color: white;
