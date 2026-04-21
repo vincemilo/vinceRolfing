@@ -1,3 +1,7 @@
+/* ============================================
+   1. VARIABLES & RESET
+   ============================================ */
+
 :root {
   --primary-color: #2a5c7c;
   --secondary-color: #4a8b6c;
@@ -27,6 +31,10 @@ body {
   color: var(--dark-color);
   background-color: #fff;
 }
+
+/* ============================================
+   2. TYPOGRAPHY
+   ============================================ */
 
 h1,
 h2,
@@ -69,12 +77,38 @@ p {
   margin-bottom: 1.2rem;
 }
 
+/* ============================================
+   3. LAYOUT & CONTAINERS
+   ============================================ */
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  display: inline-block;
+}
+
+.section-title h2:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
 
 .btn {
   display: inline-block;
@@ -114,7 +148,10 @@ p {
   background-color: #c4975a;
 }
 
-/* Header & Navigation */
+/* ============================================
+   5. HEADER & NAVIGATION
+   ============================================ */
+
 header {
   position: sticky;
   top: 0;
@@ -168,16 +205,10 @@ nav ul li a:hover {
   color: var(--secondary-color);
 }
 
-/* .mobile-menu-btn {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--primary-color);
-  cursor: pointer;
-} */
+/* ============================================
+   6. HERO SECTION
+   ============================================ */
 
-/* Hero Section */
 .hero {
   padding: 160px 0 100px;
   background:
@@ -202,26 +233,10 @@ nav ul li a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Sections */
-section {
-  padding: 80px 0;
-}
+/* ============================================
+   7. SERVICES SECTION (Home Page)
+   ============================================ */
 
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title h2 {
-  display: inline-block;
-}
-
-.section-title h2:after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Services Section */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -256,7 +271,10 @@ section {
   margin-bottom: 15px;
 }
 
-/* About Section */
+/* ============================================
+   8. ABOUT SECTION
+   ============================================ */
+
 .about-content {
   display: flex;
   align-items: center;
@@ -281,7 +299,10 @@ section {
   object-fit: cover;
 }
 
-/* Pricing Section */
+/* ============================================
+   9. PRICING SECTION (Home Page)
+   ============================================ */
+
 .pricing-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -335,7 +356,10 @@ section {
   margin-right: 10px;
 }
 
-/* Policy Section Styles */
+/* ============================================
+   10. POLICY CARDS (Pricing Section)
+   ============================================ */
+
 .policy-section {
   margin-top: 60px;
   padding-top: 40px;
@@ -346,6 +370,7 @@ section {
   color: var(--primary-color);
   font-size: 1.8rem;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .policy-grid {
@@ -431,7 +456,122 @@ section {
   flex-shrink: 0;
 }
 
-/* Contact Section */
+/* ============================================
+   11. TESTIMONIALS SECTION
+   ============================================ */
+
+#testimonials {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card > i.fa-quote-left {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  opacity: 0.3;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.testimonial-card p {
+  color: var(--gray-color);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-source-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.testimonial-source-badge.google {
+  background-color: rgba(66, 133, 244, 0.1);
+  color: #4285f4;
+}
+
+.testimonial-source-badge.yelp {
+  background-color: rgba(215, 40, 40, 0.1);
+  color: #d72828;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.testimonials-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.platform-btn.google {
+  background-color: #4285f4;
+  color: white;
+}
+
+.platform-btn.yelp {
+  background-color: #d72828;
+  color: white;
+}
+
+.platform-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   12. CONTACT SECTION
+   ============================================ */
+
 .contact-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -500,7 +640,10 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* Footer */
+/* ============================================
+   13. FOOTER
+   ============================================ */
+
 footer {
   background-color: var(--dark-color);
   color: white;
@@ -577,442 +720,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Responsive */
-
-@media (max-width: 992px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero {
-    padding: 140px 0 80px;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-img {
-    width: 50%;
-  }
-
-  .pricing-card.featured {
-    transform: none;
-  }
-}
-
-@media (max-width: 768px) {
-  /* .mobile-menu-btn {
-    display: block;
-  } */
-
-  /* nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-  } */
-
-  /* nav.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  } */
-  /* 
-  nav ul {
-    flex-wrap: wrap;
-  } */
-  /* 
-  nav ul li {
-    margin: 0;
-    padding: 0 8px;
-  } */
-
-  /* nav ul li a {
-    display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--light-gray);
-  } */
-
-  /* nav ul li:last-child a {
-    border-bottom: none;
-  } */
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  section {
-    padding: 60px 0;
-  }
-
-  .policy-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .policy-card {
-    padding: 25px 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 10px 22px;
-  }
-
-  .services-grid,
-  .pricing-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* FAQ Section */
-#faq {
-  background-color: #fafafa;
-  padding: 80px 0;
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.faq-category {
-  margin-bottom: 50px;
-}
-
-.faq-category h3 {
-  color: var(--primary-color);
-  margin-bottom: 25px;
-  font-size: 1.5rem;
-  border-left: 4px solid var(--accent-color);
-  padding-left: 15px;
-}
-
-.faq-category h3 i {
-  color: var(--accent-color);
-  margin-right: 10px;
-}
-
-.faq-item {
-  background-color: white;
-  border-radius: var(--border-radius);
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--light-gray);
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 18px 20px;
-  background-color: white;
-  border: none;
-  text-align: left;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--dark-color);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: var(--transition);
-}
-
-.faq-question:hover {
-  background-color: rgba(74, 139, 108, 0.05);
-  color: var(--secondary-color);
-}
-
-.faq-question i {
-  color: var(--accent-color);
-  transition: transform 0.3s ease;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  margin-left: 15px;
-}
-
-.faq-question.active i {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background-color: #fafafa;
-  border-top: 1px solid transparent;
-}
-
-.faq-answer.active {
-  max-height: 500px;
-  border-top-color: var(--light-gray);
-}
-
-.faq-answer p {
-  padding: 20px;
-  margin: 0;
-  color: var(--gray-color);
-  line-height: 1.7;
-}
-
-.faq-answer p:first-child {
-  padding-bottom: 5px;
-}
-
-.faq-answer p:last-child {
-  padding-top: 5px;
-}
-
-/* Remove old two-column styles */
-.faq-two-column {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .faq-container {
-    padding: 0 20px;
-  }
-
-  .faq-question {
-    padding: 15px;
-    font-size: 0.95rem;
-  }
-
-  .faq-answer p {
-    padding: 15px;
-  }
-
-  .faq-category h3 {
-    font-size: 1.3rem;
-  }
-
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border-top: 1px solid transparent;
-  }
-
-  .faq-answer.active {
-    max-height: 1000px; /* Large enough for your longest answer */
-    border-top-color: var(--light-gray);
-  }
-}
-
 /* ============================================
-   TESTIMONIALS SECTION
+   14. SERVICE DETAIL PAGES (Rolfing & Orthopedic)
    ============================================ */
-
-#testimonials {
-  padding: 80px 0;
-  background-color: #fafafa;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.testimonial-card {
-  background-color: white;
-  border-radius: var(--border-radius);
-  padding: 30px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  position: relative;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* Quote icon */
-.testimonial-card > i.fa-quote-left {
-  color: var(--accent-color);
-  font-size: 1.8rem;
-  opacity: 0.3;
-  margin-bottom: 15px;
-  display: block;
-}
-
-/* Review text */
-.testimonial-card p {
-  color: var(--gray-color);
-  line-height: 1.7;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-/* Source Badge (Google/Yelp) */
-.testimonial-source-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.testimonial-source-badge.google {
-  background-color: rgba(66, 133, 244, 0.1);
-  color: #4285f4;
-}
-
-.testimonial-source-badge.yelp {
-  background-color: rgba(215, 40, 40, 0.1);
-  color: #d72828;
-}
-
-/* Author name */
-.testimonial-author {
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-top: 10px;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* Verified checkmark */
-.testimonial-author i {
-  margin-left: 6px;
-  font-size: 0.8rem;
-}
-
-/* Source link (optional) */
-.testimonial-source-link {
-  font-size: 0.75rem;
-  margin-top: 8px;
-}
-
-.testimonial-source-link a {
-  color: var(--gray-color);
-  text-decoration: none;
-}
-
-.testimonial-source-link a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-/* Featured testimonial (larger, maybe first one) */
-.testimonial-card.featured {
-  background: linear-gradient(135deg, white 0%, rgba(74, 139, 108, 0.02) 100%);
-  border: 1px solid rgba(74, 139, 108, 0.2);
-}
-
-/* Footer with platform links */
-.testimonials-footer {
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid var(--light-gray);
-}
-
-.testimonials-footer p {
-  color: var(--gray-color);
-  margin-bottom: 15px;
-}
-
-.platform-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.platform-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 24px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-
-.platform-btn.google {
-  background-color: #4285f4;
-  color: white;
-}
-
-.platform-btn.yelp {
-  background-color: #d72828;
-  color: white;
-}
-
-.platform-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.platform-btn i {
-  font-size: 1.1rem;
-}
-
-/* Rating stars (optional) */
-.rating-stars {
-  margin-bottom: 15px;
-}
-
-.rating-stars i {
-  color: #ffc107;
-  font-size: 0.9rem;
-  margin-right: 2px;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  #testimonials {
-    padding: 60px 0;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .platform-btn {
-    padding: 8px 18px;
-    font-size: 0.85rem;
-  }
-}
 
 /* Ten-Series Grid */
 .ten-series-grid {
@@ -1054,11 +764,18 @@ footer {
   margin: 0;
 }
 
-.series-note {
-  background-color: rgba(212, 167, 106, 0.1);
-  padding: 12px 20px;
+.series-timing {
+  font-size: 0.75rem;
+  color: var(--accent-color);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.series-details {
+  background-color: rgba(74, 139, 108, 0.05);
+  padding: 20px;
   border-radius: var(--border-radius);
-  font-size: 0.9rem;
+  margin-top: 20px;
 }
 
 /* Benefits Grid */
@@ -1082,6 +799,48 @@ footer {
   color: var(--secondary-color);
   font-size: 1.2rem;
   width: 30px;
+}
+
+/* Practical Info */
+.practical-info {
+  background-color: #fafafa;
+  border-radius: var(--border-radius);
+  padding: 25px;
+}
+
+.practical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.practical-item {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.practical-item i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.practical-item strong {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.practical-item p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--gray-color);
 }
 
 /* Simple Pricing Rows */
@@ -1127,17 +886,6 @@ footer {
   margin-top: 15px;
 }
 
-/* FAQ Section on service page */
-.faq-section {
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 2px solid var(--light-gray);
-}
-
-.faq-section h2 {
-  margin-bottom: 30px;
-}
-
 /* CTA Section */
 .cta-section {
   text-align: center;
@@ -1164,12 +912,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.cta-note {
-  font-size: 0.85rem;
-  color: var(--gray-color);
-  margin-top: 15px;
-}
-
 .cta-compare {
   margin-top: 20px;
   padding-top: 20px;
@@ -1177,35 +919,7 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .ten-series-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-row {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-  }
-
-  .cta-section {
-    padding: 30px 20px;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-
-  .cta-buttons .btn {
-    width: 100%;
-  }
-}
-
-/* Techniques Grid (reuse from earlier) */
+/* Orthopedic-specific */
 .techniques-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1222,7 +936,6 @@ footer {
   color: var(--primary-color);
 }
 
-/* Orthopedic Process Grid */
 .orthopedic-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1236,7 +949,6 @@ footer {
   padding: 25px;
   text-align: center;
   box-shadow: var(--shadow);
-  position: relative;
 }
 
 .orthopedic-number {
@@ -1265,7 +977,7 @@ footer {
   margin: 0;
 }
 
-/* Comparison Block (reuse from earlier) */
+/* Comparison Block */
 .comparison-block {
   background-color: rgba(212, 167, 106, 0.05);
   border-radius: var(--border-radius);
@@ -1318,18 +1030,128 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile responsive for comparison */
+/* ============================================
+   15. RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    padding: 140px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 50%;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-card {
+    padding: 25px 20px;
+  }
+
+  #testimonials {
+    padding: 60px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .platform-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .ten-series-grid,
+  .benefits-grid,
+  .orthopedic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-row {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .cta-section {
+    padding: 30px 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
   .comparison-box {
     grid-template-columns: 1fr;
     gap: 15px;
   }
 
-  .orthopedic-grid {
-    grid-template-columns: 1fr;
-  }
-
   .techniques-grid {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 22px;
+  }
+
+  .services-grid,
+  .pricing-container {
+    grid-template-columns: 1fr;
   }
 }
