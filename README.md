@@ -1,2 +1,3 @@
 # vinceRolfing
-Updated Rolfing website
+
+Updated Rolfing website.
