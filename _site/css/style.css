@@ -1246,3 +1246,54 @@ footer {
     padding: 15px;
   }
 }
+
+/* Contact Section Social Links */
+.contact-social {
+  align-self: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-social h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(42, 92, 124, 0.1);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Visually hidden text for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
